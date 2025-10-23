@@ -1,0 +1,9 @@
+{
+	"extends": "solhint:recommended",
+	"plugins": [],
+	"rules": {
+		"func-visibility": ["error", { "ignoreConstructors": true }],
+		"no-global-import": "off",
+		"no-empty-blocks": "off"
+	}
+}

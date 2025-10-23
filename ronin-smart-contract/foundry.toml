@@ -1,0 +1,25 @@
+[profile.default]
+src = "src"
+out = "out"
+viaIR = true
+solc_version = "0.8.24"
+libs = ["lib", "lib/openzeppelin-contracts/lib"]
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+    "@77bit/=lib/77bit/",
+    "@erc721a-upgradeable/=lib/ERC721A-Upgradeable/contracts/"
+]
+
+[profile.default.fuzz]
+runs = 1000
+
+[profile.default.invariant]
+runs = 1000
+depth = 15
+fail_on_revert = false
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options 
